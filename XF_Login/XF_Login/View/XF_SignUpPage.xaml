@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="Black" xmlns="http://xamarin.com/schemas/2014/forms"    
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             x:Class="XF_Login.View.XF_SignUpPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Label Padding="0,10,0,0" HorizontalOptions="CenterAndExpand" Text="&lt;devEnd&gt;" FontSize="30" TextColor="White"/>
+                <Label Text="Registration" TextColor="SteelBlue" FontSize="20"/>
+                <StackLayout Orientation="Horizontal" Spacing="30">
+                    <Button ImageSource="Google48P.png" x:Name="btn_Google" Clicked="btn_Google_Clicked" BackgroundColor="Black" />
+                    <Button ImageSource="Android52.png" x:Name="btn_Android52" Clicked="btn_Android52_Clicked" BackgroundColor="Black"   />
+                </StackLayout>
+                
+                <Label Text="Username" TextColor="SteelBlue"/>
+                
+                <Grid RowDefinitions="80">
+                    <Frame  CornerRadius="20" BorderColor="White" BackgroundColor="Black" HeightRequest="30"  >
+
+                        <Entry VerticalTextAlignment="Center" HorizontalTextAlignment="Start"  TextColor="White" x:Name="Usernameentery" Placeholder="Username" Text="{Binding Username}" Keyboard="Email"  FontSize="15"   PlaceholderColor="SteelBlue"   
+                 />
+
+                    </Frame >
+                    <Button ImageSource="User.png" HorizontalOptions="EndAndExpand" x:Name="btn_Username" Clicked="btn_Username_Clicked" BackgroundColor="Transparent"/>
+                </Grid>
+                
+                <Label Text="E-mail" TextColor="SteelBlue"/>
+                
+                <Grid RowDefinitions="80">
+                    <Frame  CornerRadius="20" BorderColor="White" BackgroundColor="Black" HeightRequest="30"  >
+
+                        <Entry VerticalTextAlignment="Center" HorizontalTextAlignment="Start"  TextColor="White" x:Name="Emailentery" Placeholder="Email" Text="{Binding Email}" Keyboard="Email"  FontSize="15"   PlaceholderColor="SteelBlue"   
+                 />
+
+                    </Frame >
+                    <Button ImageSource="Email.png" HorizontalOptions="EndAndExpand" x:Name="btn_Email" Clicked="btn_Email_Clicked" BackgroundColor="Transparent"/>
+                </Grid>
+               
+                <Label  Text="Password" TextColor="SteelBlue"/>
+                
+                <Grid RowDefinitions="80" >
+
+                    <Frame CornerRadius="20" BorderColor="White" BackgroundColor="Black">
+                        <Entry x:Name="passwordentery" Placeholder="Password" Text="{Binding Password}"    
+                    TextColor="White" PlaceholderColor="SteelBlue" />
+                    </Frame>
+
+                    <Button ImageSource="UnSichtbar.png" HorizontalOptions="EndAndExpand" x:Name="btn_Vis" Clicked="btn_Vis_Clicked" Background="Transparent"/>
+                </Grid>
+                <Label Text="Re enter Password" TextColor="SteelBlue"/>
+                <Grid RowDefinitions="80" >
+
+                    <Frame  CornerRadius="20" BorderColor="White" BackgroundColor="Black" >
+                        <Entry x:Name="cfmpasswordentery" Placeholder="Re_Enter Password" Text="{Binding ConfirmPassword}"   
+                   TextColor="White" PlaceholderColor="SteelBlue"/>
+                    </Frame>
+                    <Button ImageSource="UnSichtbar.png" HorizontalOptions="EndAndExpand" x:Name="btn_ReVis" Clicked="btn_ReVis_Clicked" Background="Transparent" />
+                </Grid>
+
+
+                <Button Margin="0,20,0,0" x:Name="signup" CornerRadius="20" TextColor="White" BackgroundColor="SteelBlue" Text="Creat your Account" Command="{Binding SignUpCommand}" HorizontalOptions="Fill"  />
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>    
